@@ -1,0 +1,127 @@
+:root {
+  --clr-blue: hsl(185, 75%, 39%);
+  --clr-navy: hsl(229, 23%, 23%);
+  --clr-gray: hsl(227, 10%, 46%);
+  --clr-lightgray: hsl(225, 10%, 92%);
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+@layer reset {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  img,
+  picture,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  body {
+    min-height: 100vh;
+  }
+  ul {
+    list-style: none;
+  }
+}
+@layer base {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-navy);
+    font-weight: var(--fw-normal);
+    font-family: "Kumbh Sans", sans-serif;
+    background-color: var(--clr-blue);
+    position: relative;
+    overflow: hidden;
+  }
+  .pattern {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .top-bg {
+    top: -500px;
+    left: -300px;
+  }
+
+  .bottom-bg {
+    bottom: -600px;
+    right: -300px;
+  }
+
+  p {
+    color: var(--clr-gray);
+  }
+}
+@layer components {
+  .profile-card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.15);
+
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 4rem;
+  }
+  .profile-img {
+    border-radius: 50%;
+    transform: translate(0%, -50%);
+    border: 5px solid white;
+    margin-block-end: -2rem;
+  }
+  .profile-name {
+    font-size: 1rem;
+    margin-block-end: 0.5rem;
+  }
+  .profile-name span {
+    color: var(--clr-gray);
+    font-weight: var(--fw-normal);
+  }
+  .place {
+    font-size: 0.9rem;
+  }
+  .card-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--clr-lightgray);
+    padding-block: 1rem;
+    text-align: center;
+    margin-top: -2rem;
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .stat-number {
+    font-weight: var(--fw-bold);
+    color: var(--clr-navy);
+  }
+  .stat-label {
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    color: var(--clr-gray);
+    opacity: 0.9;
+  }
+}
