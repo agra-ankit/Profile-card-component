@@ -54,13 +54,13 @@
   }
 
   .top-bg {
-    top: -500px;
-    left: -300px;
+    top: -31.25rem;
+    left: -18.75rem;
   }
 
   .bottom-bg {
-    bottom: -600px;
-    right: -300px;
+    bottom: -37.5rem;
+    right: -18.75rem;
   }
 
   p {
